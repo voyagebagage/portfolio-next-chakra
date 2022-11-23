@@ -25,9 +25,9 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 const About = () => {
   const SimpleList = ({ myList, icon, noIcon }) => (
     <UnorderedList>
-      {myList.map((item) => (
-        <List>
-          <ListItem color={item.includes("UI") ? "tertiary" : null}>
+      <List>
+        {myList.map((item, idx) => (
+          <ListItem key={idx} color={item.includes("UI") ? "tertiary" : null}>
             {noIcon ? null : (
               <ListIcon
                 as={icon || BsIcons.BsPatchCheckFill}
@@ -36,8 +36,8 @@ const About = () => {
             )}
             {item}
           </ListItem>
-        </List>
-      ))}
+        ))}
+      </List>
     </UnorderedList>
   );
   {
@@ -47,22 +47,23 @@ const About = () => {
     <VStack mt={119} w="80%" display="flex" border="2px solid red">
       <IconButton w="100%" h="100%" p={4}>
         <Text letterSpacing={2}>
-          Hi, I'm Oli, web and mobile developer based in Thailand
+          Hi, I&apos;m Oli, web and mobile developer based in Thailand
         </Text>
       </IconButton>
       <SimpleGrid columns={2} w="100%" spacing={7} p={2}>
         <Box>
           <Text textAlign="justify">
-            I'm front end / full stack developer I started programming during
-            covid time, in Koh Phangan. I studied at 'Le Réacteur', to have more
-            details click on stacks details, or see below.
+            I&apos;m front end / full stack developer I started programming
+            during covid time, in Koh Phangan. I studied at &apos;Le
+            Réacteur&apos;, to have more details click on stacks details, or see
+            below.
           </Text>
         </Box>
         <Box>
           <Text textAlign="justify">
-            I had my first company experience at 'Ninja partners', and
+            I had my first company experience at &apos;Ninja partners&apos;, and
             participate to small projects here and there. I had personal life
-            things to deal with and know I'm back to work
+            things to deal with and know I&apos;m back to work
           </Text>
         </Box>
         <Box>

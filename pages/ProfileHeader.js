@@ -228,7 +228,7 @@ function ProfileHeader() {
                   size="sm"
                   // w="100%"
                 >
-                  Let's Talk
+                  Let&apos;s Talk
                 </Link>
               </NextLink>
             </MotionButton>
